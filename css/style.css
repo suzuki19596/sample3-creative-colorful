@@ -176,14 +176,17 @@
             width: 80px;
             height: 80px;
             margin: 0 auto 1.5rem;
-            background: linear-gradient(135deg, var(--card-color-1), var(--card-color-2));
             border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
+            overflow: hidden;
             transform: rotate(-10deg);
             transition: transform 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .card-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .color-card:hover .card-icon {
@@ -294,23 +297,18 @@
         .gallery-item {
             aspect-ratio: 1;
             border-radius: 15px;
-            background: linear-gradient(135deg,
-                var(--item-color-1, #ee7752),
-                var(--item-color-2, #e73c7e));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3rem;
+            overflow: hidden;
             transition: transform 0.3s ease;
             cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
-        .gallery-item:nth-child(1) { --item-color-1: #ee7752; --item-color-2: #e73c7e; }
-        .gallery-item:nth-child(2) { --item-color-1: #23a6d5; --item-color-2: #23d5ab; }
-        .gallery-item:nth-child(3) { --item-color-1: #f093fb; --item-color-2: #f5576c; }
-        .gallery-item:nth-child(4) { --item-color-1: #4facfe; --item-color-2: #00f2fe; }
-        .gallery-item:nth-child(5) { --item-color-1: #fa709a; --item-color-2: #fee140; }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
         .gallery-item:nth-child(6) { --item-color-1: #30cfd0; --item-color-2: #330867; }
 
         .gallery-item:hover {
